@@ -37,4 +37,11 @@ public class MathUtilsUnitTest {
     Assertions.assertEquals(expected, actual, "Add of zero plus one return one");
   }
 
+  @Test
+  public void Davide_One_By_Zero_Returns_Arithmetic_Exception(){
+    Assertions.assertThrows(ArithmeticException.class,
+        () -> mathUtils.davide(1, 0),
+        "One devided by zero should throws exception");
+  }
+
 }

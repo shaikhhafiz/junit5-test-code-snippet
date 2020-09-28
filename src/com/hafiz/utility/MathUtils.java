@@ -6,4 +6,8 @@ public class MathUtils {
     return a + b;
   }
 
+  public int davide(int a, int b) {
+    return a / b;
+  }
+
 }
