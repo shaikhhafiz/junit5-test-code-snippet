@@ -27,7 +27,8 @@ public class MathUtilsUnitTest {
   public void Add_Zero_plus_Zero_Returns_Zero(){
     int actual = mathUtils.add(0,0);
     int expected = 0;
-    Assertions.assertEquals(expected, actual, "Add of zero plus zero return zero");
+    //Probably lambda function instead of using string is invoked lazily when error occured
+    Assertions.assertEquals(expected, actual, () -> "Add of zero plus zero return zero");
   }
 
   @Test
@@ -38,14 +39,14 @@ public class MathUtilsUnitTest {
   }
 
   @Test
-  public void Devide_One_By_Zero_Returns_Arithmetic_Exception(){
+  public void Divide_One_By_Zero_Returns_Arithmetic_Exception(){
     int a = 1, b = 0;
     /*If Assumptions false then test code should not run.
     Basically some logic placed here on what things we don't have control
      */
     Assumptions.assumeTrue(b == 0);
     Assertions.assertThrows(ArithmeticException.class,
-        () -> mathUtils.devide(a, b),
+        () -> mathUtils.divide(a, b),
         "One devided by zero should throws exception");
   }
 
