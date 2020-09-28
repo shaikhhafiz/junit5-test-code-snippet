@@ -38,9 +38,14 @@ public class MathUtilsUnitTest {
   }
 
   @Test
-  public void Davide_One_By_Zero_Returns_Arithmetic_Exception(){
+  public void Devide_One_By_Zero_Returns_Arithmetic_Exception(){
+    int a = 1, b = 0;
+    /*If Assumptions false then test code should not run.
+    Basically some logic placed here on what things we don't have control
+     */
+    Assumptions.assumeTrue(b == 0);
     Assertions.assertThrows(ArithmeticException.class,
-        () -> mathUtils.davide(1, 0),
+        () -> mathUtils.devide(a, b),
         "One devided by zero should throws exception");
   }
 
