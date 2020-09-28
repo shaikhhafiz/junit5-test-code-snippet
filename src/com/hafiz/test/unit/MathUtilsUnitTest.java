@@ -1,20 +1,20 @@
 package com.hafiz.test.unit;
 
-import com.hafiz.utility.MathUtility;
+import com.hafiz.utility.MathUtils;
 import org.junit.jupiter.api.*;
 import org.junit.platform.commons.logging.Logger;
 import org.junit.platform.commons.logging.LoggerFactory;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-public class MathUtilityUnitTest {
+public class MathUtilsUnitTest {
 
   private static Logger logger;
-  private MathUtility mathUtility;
+  private MathUtils mathUtils;
 
   @BeforeAll
   public void setUp(){
-    logger = LoggerFactory.getLogger(MathUtilityUnitTest.class);
-    this.mathUtility = new MathUtility();
+    logger = LoggerFactory.getLogger(MathUtilsUnitTest.class);
+    this.mathUtils = new MathUtils();
     logger.info( () -> "Logger and target class instantiation completed");
   }
 
@@ -25,14 +25,14 @@ public class MathUtilityUnitTest {
 
   @Test
   public void Add_Zero_plus_Zero_Returns_Zero(){
-    int actual = mathUtility.add(0,0);
+    int actual = mathUtils.add(0,0);
     int expected = 0;
     Assertions.assertEquals(expected, actual, "Add of zero plus zero return zero");
   }
 
   @Test
   public void Add_Zero_plus_One_Returns_One(){
-    int actual = mathUtility.add(0,1);
+    int actual = mathUtils.add(0,1);
     int expected = 1;
     Assertions.assertEquals(expected, actual, "Add of zero plus one return one");
   }

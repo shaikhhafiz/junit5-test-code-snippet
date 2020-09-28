@@ -1,6 +1,6 @@
 package com.hafiz.utility;
 
-public class StringUtility {
+public class StringUtils {
 
   public static String reverseStr(String input) {
     if(input == null || input.equals("")) return input;
